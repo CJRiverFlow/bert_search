@@ -3,7 +3,6 @@ from elasticsearch import Elasticsearch
 sentence_transformer = SentenceTransformer("distiluse-base-multilingual-cased-v1")
 es_client = Elasticsearch("localhost:9200")
 INDEX_NAME = "bert_betmaster"
-
 ENCODER_BOOST = 10
 
 def query_question(query: str, top_n: int=3):
@@ -44,4 +43,4 @@ def query_question(query: str, top_n: int=3):
     print(clean_result)
     return clean_result
 
-query_question("¿Cuales son los requer", 3)
+query_question("What is a cookie?", 3)

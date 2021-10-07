@@ -1,0 +1,2 @@
+python create_indexes.py --index_name prueba
+python insert_data.py --index_name=prueba --file_path=../files/Betmaster.csv
